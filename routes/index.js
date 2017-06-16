@@ -19,6 +19,12 @@ router.get('/css', function(req, res, next) {
   });
 });
 
+router.get('/seeds', function(req, res, next) {
+  res.render('seeds', {
+    seeds: read(join(__dirname, '../public/seeds.json'))
+  });
+});
+
 const components = [
   {
     name: 'All Messages Selected',
