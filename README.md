@@ -12,7 +12,7 @@ This shows you all of the individual components with both a preview and the HTML
 
 This shows you an example of what the app should look like:
 
-![](images/components.png)
+![](images/example.png)
 
 ## CSS
 
