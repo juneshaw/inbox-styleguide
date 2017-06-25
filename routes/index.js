@@ -27,38 +27,46 @@ router.get('/seeds', function(req, res, next) {
 
 const components = [
   {
-    name: 'All Messages Selected',
+    name: 'Toolbar: All Messages Selected',
     filename: 'all-messages-selected.html',
   },
   {
-    name: 'Some Messages Selected',
+    name: 'Toolbar: Some Messages Selected',
     filename: 'some-messages-selected.html',
   },
   {
-    name: 'No Messages Selected',
+    name: 'Toolbar: No Messages Selected',
     filename: 'no-messages-selected.html',
   },
   {
-    name: 'Unread Message (unstarred)',
+    name: 'Toolbar: With Compose Button',
+    filename: 'toolbar-with-compose-button.html',
+  },
+  {
+    name: 'Message: Unread Message (unstarred)',
     filename: 'unread-message.html',
   },
   {
-    name: 'Read Message (unstarred)',
+    name: 'Message: Read Message (unstarred)',
     filename: 'read-message.html',
   },
   {
-    name: 'Selected Message',
+    name: 'Message: Selected Message',
     filename: 'selected-message.html',
   },
   {
-    name: 'Starred Message',
+    name: 'Messeage: Starred Message',
     filename: 'starred-message.html',
   },
   {
-    name: 'Message With Labels',
+    name: 'Message: Message With Labels',
     filename: 'message-with-labels.html',
   },
-]
+  {
+    name: 'Compose Form',
+    filename: 'compose-form.html',
+  },
+].map( (component, index) => Object.assign(component, {id: index}) )
 
 function addHtmlToComponent(component) {
   return Object.assign(

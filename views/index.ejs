@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/app.css" />
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#sidebar">
     <div class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -34,25 +34,47 @@
     </div>
 
     <div class="container">
-      <div class="page-header">
-        <h1>Inbox Styleguide</h1>
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="page-header">
+            <h1>Inbox Styleguide</h1>
+          </div>
+
+          <% for(component of components) { %>
+            <p id="component-<%= component.id %>" class="lead"><%= component.name %></p>
+
+            <p>Preview:</p>
+
+            <%- component.html %>
+
+            <p>Source:</p>
+
+            <pre><code><%= component.html %></code></pre>
+
+            <hr>
+          <% } %>
+        </div>
+        <div id="sidebar" class="col-sm-3">
+          <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-bottom="200">
+            <% for(component of components) { %>
+              <li>
+                <a href="#component-<%= component.id %>">
+                  <%= component.name %>
+                </a>
+              </li>
+            <% } %>
+          </ul>
+        </div>
       </div>
-
-      <% for(component of components) { %>
-        <p class="lead"><%= component.name %></p>
-
-        <p>Preview:</p>
-
-        <%- component.html %>
-
-        <p>Source:</p>
-
-        <pre><code><%= component.html %></code></pre>
-
-        <hr>
-      <% } %>
 
       <footer class="spacer"></footer>
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+
   </body>
 </html>
