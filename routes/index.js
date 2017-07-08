@@ -28,39 +28,43 @@ router.get('/seeds', function(req, res, next) {
 const components = [
   {
     name: 'Toolbar: All Messages Selected',
-    filename: 'all-messages-selected.html',
+    filename: 'toolbar-all-messages-selected.html',
   },
   {
     name: 'Toolbar: Some Messages Selected',
-    filename: 'some-messages-selected.html',
+    filename: 'toolbar-some-messages-selected.html',
   },
   {
     name: 'Toolbar: No Messages Selected',
-    filename: 'no-messages-selected.html',
+    filename: 'toolbar-no-messages-selected.html',
   },
   {
     name: 'Toolbar: With Compose Button',
     filename: 'toolbar-with-compose-button.html',
   },
   {
-    name: 'Message: Unread Message (unstarred)',
-    filename: 'unread-message.html',
+    name: 'Message: Unread (unstarred)',
+    filename: 'message-unread.html',
   },
   {
-    name: 'Message: Read Message (unstarred)',
-    filename: 'read-message.html',
+    name: 'Message: Read (unstarred)',
+    filename: 'message-read.html',
   },
   {
-    name: 'Message: Selected Message',
-    filename: 'selected-message.html',
+    name: 'Message: Selected',
+    filename: 'message-selected.html',
   },
   {
-    name: 'Messeage: Starred Message',
-    filename: 'starred-message.html',
+    name: 'Messeage: Starred',
+    filename: 'message-starred.html',
   },
   {
-    name: 'Message: Message With Labels',
+    name: 'Message: With Labels',
     filename: 'message-with-labels.html',
+  },
+  {
+    name: 'Message: Expanded',
+    filename: 'message-expanded.html',
   },
   {
     name: 'Compose Form',
